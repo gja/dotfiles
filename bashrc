@@ -1,0 +1,61 @@
+#! /bin/sh
+
+# remove me
+PATH="$PATH:/usr/local/bin"
+
+alias vi=vim
+alias top='top -o cpu'
+alias ctags=/usr/local/bin/ctags
+alias commit="git add . && git commit -a && rake"
+alias push="commit && git push"
+
+# ruby management
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+if [ -d "$HOME/.rbenv" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
+
+# Rails
+function rails_command {
+  local cmd=$1
+  shift
+  if [ -e script/rails ]; then
+    script/rails $cmd "$@"
+  else
+    script/$cmd "$@"
+  fi
+}
+alias ss='rails_command server'
+alias sc='rails_command console'
+
+# bash configurations
+export HISTCONTROL=ignoredups:erasedups 
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+shopt -s histappend
+shopt -s autocd
+shopt -s globstar
+
+#readline
+bind 'set completion-ignore-case on'
+bind 'set skip-completed-text on'
+bind 'set show-all-if-ambiguous on'
+bind 'set show-all-if-unmodified on'
+bind 'set mark-symlinked-directories on'
+bind 'set mark-directories on'
+bind 'set completion-prefix-display-length 12'
+
+# OSX Specific
+if [ -f /usr/local/etc/bash_completion ]; then
+  . /usr/local/etc/bash_completion
+fi
+if [ -f /Applications/MacVim.app/Contents/MacOS/Vim ]; then
+  alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
+  alias mvim='vim -g'
+  export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+fi
+
+# final path setting
+export PATH="./bin:~/bin:$PATH"
+PS1='[\h \W$(__git_ps1 " (%s)")]Ω '
