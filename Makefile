@@ -1,2 +1,2 @@
 all:
-	for i in *; do echo $$i; done
+	for i in dot*; do cp $$i ~/$${i/dot/.}; done
