@@ -41,10 +41,8 @@ shopt -s globstar
 bind 'set completion-ignore-case on'
 bind 'set skip-completed-text on'
 bind 'set show-all-if-ambiguous on'
-bind 'set show-all-if-unmodified on'
 bind 'set mark-symlinked-directories on'
 bind 'set mark-directories on'
-bind 'set completion-prefix-display-length 12'
 
 # OSX Specific
 if [ -f /usr/local/etc/bash_completion ]; then
