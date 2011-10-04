@@ -54,6 +54,9 @@ if [ -f /Applications/MacVim.app/Contents/MacOS/Vim ]; then
   export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 fi
 
+# Oracle on my mac stuff
+export DYLD_LIBRARY_PATH=~/workspace/oracle-32/instantclient_10_2:$DYLD_LIBRARY_PATH
+
 # final path setting
 export PATH="./bin:~/bin:$PATH"
 PS1='[\h \W$(__git_ps1 " (%s)")]Ω '
