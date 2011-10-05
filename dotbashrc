@@ -36,6 +36,7 @@ export HISTFILESIZE=100000
 shopt -s histappend
 shopt -s autocd
 shopt -s globstar
+shopt -s checkhash
 
 #readline
 bind 'set completion-ignore-case on'
