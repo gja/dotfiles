@@ -57,6 +57,7 @@ fi
 
 # Oracle on my mac stuff
 export DYLD_LIBRARY_PATH=~/workspace/oracle-32/instantclient_10_2:$DYLD_LIBRARY_PATH
+export ORACLE_SID=XE
 
 # final path setting
 export PATH="./bin:~/bin:$PATH"
