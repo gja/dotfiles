@@ -54,10 +54,13 @@ if [ -f /Applications/MacVim.app/Contents/MacOS/Vim ]; then
   alias mvim='vim -g'
   export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 fi
+export LC_CTYPE=en_US
 
 # Oracle on my mac stuff
-export DYLD_LIBRARY_PATH=~/workspace/oracle-32/instantclient_10_2:$DYLD_LIBRARY_PATH
-export ORACLE_SID=XE
+export ORACLE_PATH=~/workspace/oracle-32/instantclient_10_2
+export DYLD_LIBRARY_PATH=$ORACLE_PATH:$DYLD_LIBRARY_PATH
+export SQLPATH=$ORACLE_PATH
+export TNS_ADMIN=$ORACLE_PATH
 
 # final path setting
 export PATH="./bin:~/bin:$PATH"
