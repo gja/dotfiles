@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 # remove me
 PATH="$PATH:/usr/local/bin"
@@ -6,8 +6,8 @@ PATH="$PATH:/usr/local/bin"
 alias vi=vim
 alias top='top -o cpu'
 alias ctags=/usr/local/bin/ctags
-alias commit="git add . && git commit -a && rake"
-alias push="commit && git push"
+function commit() { git add . && git commit -a "$@" && rake; }
+function push() { commit "$@" && git push; }
 
 # ruby management
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
