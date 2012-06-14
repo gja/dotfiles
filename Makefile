@@ -1,2 +1,2 @@
 all:
-	for i in dot*; do cp $$i ~/$${i/dot/.}; done
+	for i in dot*; do cp -r $$i ~/$${i/dot/.}; done

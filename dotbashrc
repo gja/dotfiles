@@ -1,8 +1,5 @@
 #! /bin/bash
 
-# remove me
-PATH="$PATH:/usr/local/bin"
-
 alias vi=vim
 alias top='top -o cpu'
 alias ctags=/usr/local/bin/ctags
@@ -63,5 +60,5 @@ export SQLPATH=$ORACLE_PATH
 export TNS_ADMIN=$ORACLE_PATH
 
 # final path setting
-export PATH="./bin:~/bin:$PATH"
+export PATH="./bin:~/bin:~/.bin:/usr/local/bin:$PATH"
 PS1='[\h \W$(__git_ps1 " (%s)")]Ω '
