@@ -53,12 +53,6 @@ if [ -f /Applications/MacVim.app/Contents/MacOS/Vim ]; then
 fi
 export LC_CTYPE=en_US
 
-# Oracle on my mac stuff
-export ORACLE_PATH=~/workspace/oracle-32/instantclient_10_2
-export DYLD_LIBRARY_PATH=$ORACLE_PATH:$DYLD_LIBRARY_PATH
-export SQLPATH=$ORACLE_PATH
-export TNS_ADMIN=$ORACLE_PATH
-
 # final path setting
 export PATH="./bin:~/bin:~/.bin:/usr/local/bin:$PATH"
 PS1='[\h \W$(__git_ps1 " (%s)")]Ω '
