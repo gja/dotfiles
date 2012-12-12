@@ -3,6 +3,7 @@
 alias vi=vim
 alias top='top -o cpu'
 alias ctags=/usr/local/bin/ctags
+alias rspec=fast_rspec
 function commit() { git add . && git commit -a "$@" && rake; }
 function push() { commit "$@" && git push; }
 
@@ -27,7 +28,7 @@ alias ss='rails_command server'
 alias sc='rails_command console'
 
 # bash configurations
-export HISTCONTROL=ignoredups:erasedups 
+export HISTCONTROL=ignoredups:erasedups
 export HISTSIZE=100000
 export HISTFILESIZE=100000
 shopt -s histappend
@@ -56,3 +57,5 @@ export LC_CTYPE=en_US
 # final path setting
 export PATH="./bin:~/bin:~/.bin:/usr/local/bin:$PATH"
 PS1='[\h \W$(__git_ps1 " (%s)")]Ω '
+
+export HISTIGNORE="*production*"

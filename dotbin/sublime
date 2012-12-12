@@ -1,9 +1,0 @@
-#! /bin/sh
-
-unset TERM
-if [ -f /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl ]; then
-  exec /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl "$@"
-else
-  echo "$SHELL: $0: command not found"
-  exit 127
-fi
