@@ -4,6 +4,11 @@ alias vi=vim
 alias top='top -o cpu'
 alias ctags=/usr/local/bin/ctags
 alias rspec=fast_rspec
+alias g=git
+alias gc='git commit'
+alias ga='git add'
+alias gst='git status'
+
 function commit() { git add . && git commit -a "$@" && rake; }
 function push() { commit "$@" && git push; }
 
@@ -47,11 +52,7 @@ bind 'set mark-directories on'
 if [ -f /usr/local/etc/bash_completion ]; then
   . /usr/local/etc/bash_completion
 fi
-if [ -f /Applications/MacVim.app/Contents/MacOS/Vim ]; then
-  alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
-  alias mvim='vim -g'
-  export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
-fi
+export BUNDLER_EDITOR=sublime
 export LC_CTYPE=en_US
 
 # final path setting
