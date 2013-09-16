@@ -60,3 +60,7 @@ export PATH="./bin:~/bin:~/.bin:/usr/local/bin:$PATH"
 PS1='[\h \W$(__git_ps1 " (%s)")]Ω '
 
 export HISTIGNORE="*production*"
+
+if [ -d ~/.bash-completion.d ]; then
+  for f in ~/.bash-completion.d/*.{sh,bash}; do source "$f"; done
+fi
