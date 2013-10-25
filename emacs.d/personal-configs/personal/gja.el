@@ -8,4 +8,6 @@
 (prelude-ensure-module-deps '(solarized-theme))
 (load-theme 'solarized-dark t)
 
+(global-set-key (kbd "M-t") 'helm-find)
+
 (auto-complete-mode)
