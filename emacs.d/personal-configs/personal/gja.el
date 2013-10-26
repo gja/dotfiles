@@ -20,8 +20,6 @@
 (prelude-ensure-module-deps '(solarized-theme))
 (load-theme 'solarized-dark t)
 
-(global-set-key (kbd "M-t") 'projectile-find-file)
-
 (auto-complete-mode)
 (provide 'gja)
 ;;; gja.el ends here
