@@ -4,16 +4,18 @@
   (kill-line)
   (yank)
   (open-line 1)
-  (next-line 1)
+  (forward-line 1)
   (yank))
 
 (defun comment-or-uncomment-line-or-region ()
   (interactive)
   (if (region-active-p)
     (comment-or-uncomment-region (region-beginning) (region-end))
-    (progn
-      (comment-or-uncomment-region (line-beginning-position) (line-end-position))
-      (next-line))))
+    (let ((horizontal-position (current-column)))
+      (progn
+        (comment-or-uncomment-region (line-beginning-position) (line-end-position))
+        (forward-line 1)
+        (move-to-column horizontal-position)))))
 
 (global-set-key (kbd "M-t") 'projectile-find-file)
 (global-set-key (kbd "M-s-<right>") 'switch-to-next-buffer)
