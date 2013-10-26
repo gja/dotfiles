@@ -12,7 +12,7 @@
 (setq visual-line-fringe-indicators '(left-curly-arrow nil))
 (setq whitespace-line-column 1000)
 
-(add-hook 'enh-ruby-mode-hook 'local-fix-indentation)
+(add-hook 'ruby-mode-hook 'local-fix-indentation)
 
 (add-hook 'LaTeX-mode-hook 'turn-off-auto-fill-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-visual-line-mode)
