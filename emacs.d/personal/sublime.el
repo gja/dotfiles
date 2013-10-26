@@ -7,16 +7,19 @@
   (next-line 1)
   (yank))
 
-(defun comment-or-uncomment-line ()
+(defun comment-or-uncomment-line-or-region ()
   (interactive)
-  (comment-or-uncomment-region (line-beginning-position) (line-end-position))
-  (next-line))
+  (if (region-active-p)
+    (comment-or-uncomment-region (region-beginning) (region-end))
+    (progn
+      (comment-or-uncomment-region (line-beginning-position) (line-end-position))
+      (next-line))))
 
 (global-set-key (kbd "M-t") 'projectile-find-file)
 (global-set-key (kbd "M-s-<right>") 'switch-to-next-buffer)
 (global-set-key (kbd "M-s-<left>") 'switch-to-prev-buffer)
 (global-set-key (kbd "M-D") 'duplicate-line)
-(global-set-key (kbd "M-/") 'comment-or-uncomment-line)
+(global-set-key (kbd "M-/") 'comment-or-uncomment-line-or-region)
 
 (eval-after-load 'rspec-mode
   '(progn
