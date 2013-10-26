@@ -3,5 +3,5 @@
 
 (require 'auto-complete)
 
-(global-auto-complete-mode t)
 (yas-global-mode t)
+(global-auto-complete-mode t)

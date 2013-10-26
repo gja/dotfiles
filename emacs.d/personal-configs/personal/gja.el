@@ -20,6 +20,8 @@
 (prelude-ensure-module-deps '(solarized-theme))
 (load-theme 'solarized-dark t)
 
+(define-key global-map (kbd "RET") 'newline-and-indent)
+
 (auto-complete-mode)
 (provide 'gja)
 ;;; gja.el ends here
