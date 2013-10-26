@@ -10,9 +10,6 @@ alias ga='git add'
 alias gst='git status'
 alias iphone='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app/'
 
-function commit() { git add . && git commit -a "$@" && rake; }
-function push() { commit "$@" && git push; }
-
 # ruby management
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 if [ -d "$HOME/.rbenv" ]; then
@@ -33,35 +30,37 @@ function rails_command {
 alias ss='rails_command server'
 alias sc='rails_command console'
 
-# bash configurations
-export HISTCONTROL=ignoredups:erasedups
-export HISTSIZE=100000
-export HISTFILESIZE=100000
-shopt -s histappend
-shopt -s autocd
-shopt -s globstar
-shopt -s checkhash
+if [ "$BASH_VERSINFO" -ge 4 ]; then
+  # bash configurations
+  export HISTCONTROL=ignoredups:erasedups
+  export HISTSIZE=100000
+  export HISTFILESIZE=100000
+  export HISTIGNORE="*production*"
+  shopt -s histappend
+  shopt -s autocd
+  shopt -s globstar
+  shopt -s checkhash
 
-#readline
-bind 'set completion-ignore-case on'
-bind 'set skip-completed-text on'
-bind 'set show-all-if-ambiguous on'
-bind 'set mark-symlinked-directories on'
-bind 'set mark-directories on'
+  #readline
+  bind 'set completion-ignore-case on'
+  bind 'set skip-completed-text on'
+  bind 'set show-all-if-ambiguous on'
+  bind 'set mark-symlinked-directories on'
+  bind 'set mark-directories on'
 
-# OSX Specific
-if [ -f /usr/local/etc/bash_completion ]; then
-  . /usr/local/etc/bash_completion
+  # OSX Specific
+  if [ -f /usr/local/etc/bash_completion ]; then
+    . /usr/local/etc/bash_completion
+  fi
+  export BUNDLER_EDITOR=sublime
+  export LC_CTYPE=en_US
+  
+  PS1='[\h \W$(__git_ps1 " (%s)")]Ω '
+  
+  if [ -d ~/.bash-completion.d ]; then
+    for f in ~/.bash-completion.d/*.{sh,bash}; do source "$f"; done
+  fi
 fi
-export BUNDLER_EDITOR=sublime
-export LC_CTYPE=en_US
 
 # final path setting
 export PATH="./bin:~/bin:~/.bin:/usr/local/bin:$PATH"
-PS1='[\h \W$(__git_ps1 " (%s)")]Ω '
-
-export HISTIGNORE="*production*"
-
-if [ -d ~/.bash-completion.d ]; then
-  for f in ~/.bash-completion.d/*.{sh,bash}; do source "$f"; done
-fi
