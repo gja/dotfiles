@@ -1,3 +1,5 @@
+(prelude-ensure-module-deps '(multiple-cursors))
+
 (defmacro move-back-horizontal-after (&rest code)
   `(let ((horizontal-position (current-column)))
      (progn

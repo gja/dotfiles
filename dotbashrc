@@ -9,6 +9,7 @@ alias gc='git commit'
 alias ga='git add'
 alias gst='git status'
 alias iphone='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app/'
+alias emacs='open -na Emacs'
 
 # ruby management
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
