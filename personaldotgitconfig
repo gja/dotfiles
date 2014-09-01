@@ -33,3 +33,5 @@
   autosetupmerge = true
 [push]
   default = upstream
+[core]
+  excludesfile = /Users/gja/.gitglobalignore

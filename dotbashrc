@@ -9,7 +9,6 @@ alias gc='git commit'
 alias ga='git add'
 alias gst='git status'
 alias iphone='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app/'
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
 
 # ruby management
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -36,7 +35,7 @@ if [ "$BASH_VERSINFO" -ge 4 ]; then
   export HISTCONTROL=ignoredups:erasedups
   export HISTSIZE=100000
   export HISTFILESIZE=100000
-  export HISTIGNORE="*production*"
+  export HISTIGNORE="*production*:*swarmsl*"
   shopt -s histappend
   shopt -s autocd
   shopt -s globstar
@@ -56,6 +55,10 @@ if [ "$BASH_VERSINFO" -ge 4 ]; then
   export BUNDLER_EDITOR=sublime
   export LC_CTYPE=en_US
 
+  if [ -d /Applications/Emacs.app ]; then
+    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+  fi
+
   PS1='[\h \W$(__git_ps1 " (%s)")]Ω '
 
   if [ -d ~/.bash-completion.d ]; then
@@ -64,4 +67,5 @@ if [ "$BASH_VERSINFO" -ge 4 ]; then
 fi
 
 # final path setting
-export PATH="./bin:~/bin:~/.bin:/usr/local/bin:$PATH"
+export PATH="./bin:${HOME}/bin:${HOME}/.bin:/usr/local/bin:$PATH"
+alias bc="bc -l"

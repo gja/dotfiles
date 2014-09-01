@@ -6,7 +6,7 @@ general:
 personal:
 	for i in personaldot*; do ln -shvf `pwd`/$$i ~/$${i/personaldot/.}; done
 
-emacs: update-submodules
+emacs:
 	$(MAKE) -C emacs.d
 
 update-submodules:
