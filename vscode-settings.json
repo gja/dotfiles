@@ -1,0 +1,23 @@
+{
+    "editor.tabSize": 2,
+    "editor.wordWrapColumn": 120,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "eslint.autoFixOnSave": true,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+    "workbench.colorTheme": "Monokai",
+    "workbench.editor.showIcons": false,
+    "editor.detectIndentation": true,
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "workbench.statusBar.feedback.visible": false,
+
+    "window.zoomLevel": 0,
+    "files.associations": {
+        "*.css": "scss"
+    },
+    "workbench.editor.enablePreview": false,
+    "explorer.confirmDelete": false
+}
