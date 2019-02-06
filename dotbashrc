@@ -8,12 +8,17 @@ alias g=git
 alias gc='git commit'
 alias ga='git add'
 alias gst='git status'
-alias iphone='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app/'
+alias iphone='/Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app/Contents/MacOS/iOS\ Simulator'
+alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
 
 # ruby management
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 if [ -d "$HOME/.rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
+  export RBENV_ROOT="$HOME/.rbenv"
   eval "$(rbenv init -)"
 fi
 
@@ -34,8 +39,8 @@ if [ -d /Applications/Emacs.app ]; then
   alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
 fi
 
-if [ -d /Library/Java/Home ]; then
-  export JAVA_HOME=/Library/Java/Home
+if [ -d /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home ]; then
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
 fi
 
 if [ "$BASH_VERSINFO" -ge 4 ]; then
@@ -65,11 +70,23 @@ if [ "$BASH_VERSINFO" -ge 4 ]; then
 
   PS1='[\h \W$(__git_ps1 " (%s)")]Ω '
 
+  if [ -f /usr/local/etc/bash_completion ]; then
+    . /usr/local/etc/bash_completion
+  fi
+
   if [ -d ~/.bash-completion.d ]; then
     for f in ~/.bash-completion.d/*.{sh,bash}; do source "$f"; done
   fi
 fi
 
+if [ -d /usr/local/Cellar/ec2-api-tools/1.7.3.0/libexec ]; then
+  export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.7.3.0/libexec"
+fi
+
 # final path setting
 export PATH="./bin:${HOME}/bin:${HOME}/.bin:/usr/local/bin:$PATH"
 alias bc="bc -l"
+
+if [ -x ~/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/MacOS/mplayer ]; then
+  alias mplayer="$HOME/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/MacOS/mplayer"
+fi
