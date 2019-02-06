@@ -1,4 +1,4 @@
-all: general emacs
+all: general
 
 general:
 	for i in dot*; do ln -shvf `pwd`/$$i ~/$${i/dot/.}; done
