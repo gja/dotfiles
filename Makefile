@@ -13,3 +13,14 @@ emacs:
 update-submodules:
 	git submodule init
 	git submodule update
+
+vscode-extensions:
+	/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension PeterJausovec.vscode-docker
+	/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension cospaia.calva-fmt
+	/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension cospaia.clojure4vscode
+	/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension cospaia.paredit-revived
+	/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dbaeumer.vscode-eslint
+	/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-vscode.Go
+	/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-vscode.sublime-keybindings
+	/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension Orta.vscode-jest
+	/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension rebornix.ruby
