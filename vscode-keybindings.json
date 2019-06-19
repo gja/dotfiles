@@ -1,0 +1,51 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "alt+cmd+up",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.navigateBack"
+  },
+  {
+    "key": "ctrl+shift+0",
+    "command": "paredit.slurpSexpForward",
+    "when": "calva:activated && calva:pareditValid && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "-paredit.slurpSexpForward",
+    "when": "calva:activated && calva:pareditValid && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+shift+backspace",
+    "command": "paredit.killSexpForward",
+    "when": "calva:activated && calva:pareditValid && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+shift+backspace",
+    "command": "-paredit.killSexpForward",
+    "when": "calva:activated && calva:pareditValid && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "alt+r",
+    "command": "paredit.spliceSexpKillBackward",
+    "when": "calva:activated && calva:pareditValid && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+alt+up",
+    "command": "-paredit.spliceSexpKillBackward",
+    "when": "calva:activated && calva:pareditValid && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "paredit.cutForwardSexp",
+    "when": "calva:activated && calva:pareditValid && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+shift+x right",
+    "command": "-paredit.cutForwardSexp",
+    "when": "calva:activated && calva:pareditValid && paredit:keyMap =~ /original|strict/"
+  }
+]
