@@ -47,5 +47,67 @@
     "key": "ctrl+shift+x right",
     "command": "-paredit.cutForwardSexp",
     "when": "calva:activated && calva:pareditValid && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+c alt+n",
+    "command": "calva.loadNamespace",
+    "when": "calva:activated"
+  },
+  {
+    "key": "ctrl+alt+c ctrl+alt+n",
+    "command": "-calva.loadNamespace",
+    "when": "calva:activated"
+  },
+  {
+    "key": "ctrl+c ctrl+k",
+    "command": "calva.loadFile",
+    "when": "calva:activated"
+  },
+  {
+    "key": "ctrl+alt+c enter",
+    "command": "-calva.loadFile",
+    "when": "calva:activated"
+  },
+  {
+    "key": "ctrl+c t",
+    "command": "calva.runNamespaceTests",
+    "when": "calva:activated"
+  },
+  {
+    "key": "ctrl+alt+c t",
+    "command": "-calva.runNamespaceTests",
+    "when": "calva:activated"
+  },
+  {
+    "key": "ctrl+c alt+n",
+    "command": "calva.setREPLNamespace",
+    "when": "calva:activated"
+  },
+  {
+    "key": "ctrl+alt+c alt+n",
+    "command": "-calva.setREPLNamespace",
+    "when": "calva:activated"
+  },
+  {
+    "key": "ctrl+c ctrl+z",
+    "command": "calva.openCljReplWindow"
+  },
+  {
+    "key": "ctrl+c ctrl+e",
+    "command": "calva.evalCurrentFormInREPLWindow",
+    "when": "calva:activated"
+  },
+  {
+    "key": "ctrl+alt+c ctrl+alt+e",
+    "command": "-calva.evalCurrentFormInREPLWindow",
+    "when": "calva:activated"
+  },
+  {
+    "key": "ctrl+c alt+c",
+    "command": "calva.connect"
+  },
+  {
+    "key": "ctrl+alt+c ctrl+alt+c",
+    "command": "-calva.connect"
   }
 ]
