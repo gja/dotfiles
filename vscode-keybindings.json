@@ -69,7 +69,7 @@
     "when": "calva:activated"
   },
   {
-    "key": "ctrl+c t",
+    "key": "ctrl+c alt+t",
     "command": "calva.runNamespaceTests",
     "when": "calva:activated"
   },
