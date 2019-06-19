@@ -93,11 +93,6 @@
     "command": "calva.openCljReplWindow"
   },
   {
-    "key": "ctrl+c ctrl+e",
-    "command": "calva.evalCurrentFormInREPLWindow",
-    "when": "calva:activated"
-  },
-  {
     "key": "ctrl+alt+c ctrl+alt+e",
     "command": "-calva.evalCurrentFormInREPLWindow",
     "when": "calva:activated"
@@ -109,5 +104,15 @@
   {
     "key": "ctrl+alt+c ctrl+alt+c",
     "command": "-calva.connect"
+  },
+  {
+    "key": "ctrl+x ctrl+e",
+    "command": "calva.evaluateSelection",
+    "when": "calva:activated"
+  },
+  {
+    "key": "ctrl+alt+c e",
+    "command": "-calva.evaluateSelection",
+    "when": "calva:activated"
   }
 ]
