@@ -14,7 +14,19 @@ alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/co
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
-export PATH="/usr/local/bin:$PATH"
+for i in /usr/local/bin \
+  ~/.cargo \
+  /usr/local/opt/gnu-getopt/bin \
+  /usr/local/opt/curl/bin \
+  /usr/local/opt/coreutils/libexec/gnubin \
+  /usr/local/opt/findutils/libexec/gnubin \
+  ~/.bin \
+  ~/bin; do
+  if [ -d "$i" ]; then
+    PATH="$i:$PATH"
+  fi
+done
+export PATH="./bin:$PATH"
 
 # ruby management
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -86,7 +98,6 @@ if [ -d /usr/local/Cellar/ec2-api-tools/1.7.3.0/libexec ]; then
 fi
 
 # final path setting
-export PATH="./bin:${HOME}/bin:${HOME}/.bin:$PATH"
 alias bc="bc -l"
 
 if [ -x ~/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/MacOS/mplayer ]; then

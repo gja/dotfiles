@@ -5,7 +5,7 @@
     "files.insertFinalNewline": true,
     "eslint.autoFixOnSave": true,
     "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "Monokai Dimmed",
     "workbench.editor.showIcons": false,
     "editor.detectIndentation": true,
     "files.autoSave": "onFocusChange",
@@ -24,6 +24,9 @@
     "breadcrumbs.enabled": true,
 
     "editor.codeActionsOnSave": {
-        "source.fixAll.tslint": true
-    }
+        "source.fixAll.tslint": true,
+        "source.fixAll.eslint": true
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false
 }

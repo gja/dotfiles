@@ -39,16 +39,6 @@
     "when": "calva:activated && calva:pareditValid && paredit:keyMap =~ /original|strict/"
   },
   {
-    "key": "ctrl+k",
-    "command": "paredit.cutForwardSexp",
-    "when": "calva:activated && calva:pareditValid && paredit:keyMap =~ /original|strict/"
-  },
-  {
-    "key": "ctrl+shift+x right",
-    "command": "-paredit.cutForwardSexp",
-    "when": "calva:activated && calva:pareditValid && paredit:keyMap =~ /original|strict/"
-  },
-  {
     "key": "ctrl+c alt+n",
     "command": "calva.loadNamespace",
     "when": "calva:activated"
@@ -69,7 +59,7 @@
     "when": "calva:activated"
   },
   {
-    "key": "ctrl+c alt+t",
+    "key": "ctrl+c ctrl+t",
     "command": "calva.runNamespaceTests",
     "when": "calva:activated"
   },
@@ -114,5 +104,75 @@
     "key": "ctrl+alt+c e",
     "command": "-calva.evaluateSelection",
     "when": "calva:activated"
+  },
+  {
+    "key": "ctrl+=",
+    "command": "paredit.sexpRangeExpansion",
+    "when": "calva:activated && calva:pareditValid && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-paredit.sexpRangeExpansion",
+    "when": "calva:activated && calva:pareditValid && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+c ctrl+r",
+    "command": "calva.rerunTests",
+    "when": "calva:activated"
+  },
+  {
+    "key": "ctrl+alt+c ctrl+t",
+    "command": "-calva.rerunTests",
+    "when": "calva:activated"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "paredit.killSexpForward",
+    "when": "calva:replWindowActive || editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+shift+delete",
+    "command": "-paredit.killSexpForward",
+    "when": "calva:replWindowActive || editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+shift+delete",
+    "command": "-paredit.killSexpForward",
+    "when": "calva:replWindowActive || editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "shift+cmd+z",
+    "command": "-editor.action.customEditor.redo",
+    "when": "focusedCustomEditorIsEditable && !inputFocus"
+  },
+  {
+    "key": "shift+cmd+z",
+    "command": "-editor.action.customEditor.redo",
+    "when": "focusedCustomEditorIsEditable && !inputFocus"
+  },
+  {
+    "key": "shift+cmd+z",
+    "command": "-editor.action.customEditor.redo",
+    "when": "focusedCustomEditorIsEditable && !inputFocus"
+  },
+  {
+    "key": "shift+cmd+z",
+    "command": "-editor.action.customEditor.redo",
+    "when": "focusedCustomEditorIsEditable && !inputFocus"
+  },
+  {
+    "key": "shift+cmd+z",
+    "command": "-editor.action.customEditor.redo",
+    "when": "focusedCustomEditorIsEditable && !inputFocus"
+  },
+  {
+    "key": "shift+cmd+z",
+    "command": "-editor.action.webvieweditor.redo",
+    "when": "!editorFocus && !inputFocus && !webviewHasOwnEditFunctions && activeEditor == 'WebviewEditor'"
+  },
+  {
+    "key": "shift+cmd+z",
+    "command": "-redo",
+    "when": "textInputFocus && !editorReadonly"
   }
 ]
