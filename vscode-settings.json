@@ -28,5 +28,11 @@
         "source.fixAll.eslint": true
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "nasc-touchbar.showReferences": true,
+    "nasc-touchbar.togglePanel": false,
+    "nasc-touchbar.peekDefinition": true,
+    "nasc-touchbar.jumpToBracket": true,
+    "nasc-touchbar.addCursorBelow": false,
+    "nasc-touchbar.showCommands": false
 }
