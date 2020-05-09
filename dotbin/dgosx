@@ -1,5 +1,13 @@
 #!/bin/sh -e
 
+# Shell script to help devs working on dgraph on osx
+
+# Recipes
+# To start a cluster: cd path/to/dir/within/dgraph/containing/docker-compose-file; dgosx down && dgosx up
+# To run tests (after starting cluster): cd path/to/tests; dgosx make; dgosx test
+
+# Note, most tests need the cluster found in the 'dgraph' directory. Some tests have their own docker-compose.yml
+
 GIT_ROOT=$(git rev-parse --show-toplevel)
 COMMAND="$1";
 shift || true
