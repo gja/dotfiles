@@ -31,7 +31,7 @@ case "$COMMAND" in
   test) PATH="$GIT_ROOT/dgraph:$PATH" go test "$@";;
   image)
     buildBinaryForDocker
-    mkdir $GIT_ROOT/linux
+    mkdir $GIT_ROOT/linux || true
     cp $GIT_ROOT/osx-docker-gopath/bin/dgraph $GIT_ROOT/linux
     docker build "$@" -f $GIT_ROOT/contrib/Dockerfile $GIT_ROOT;;
 esac
