@@ -34,5 +34,7 @@
     "nasc-touchbar.peekDefinition": true,
     "nasc-touchbar.jumpToBracket": true,
     "nasc-touchbar.addCursorBelow": false,
-    "nasc-touchbar.showCommands": false
+    "nasc-touchbar.showCommands": false,
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true
 }

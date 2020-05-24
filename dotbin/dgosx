@@ -18,11 +18,20 @@ if [ -z "$COMMAND" ]; then
   exit 1
 fi
 
+function buildBinaryForDocker() {
+  docker run --rm -v dgraph_gopath:/go -v dgraph_gocache:/root/.cache/go-build -v $GIT_ROOT:/app -w /app/dgraph golang:1.14 go build -o /app/osx-docker-gopath/bin/dgraph
+}
+
 case "$COMMAND" in
   up)
-    docker run --rm -v dgraph_gopath:/go -v dgraph_gocache:/root/.cache/go-build -v $GIT_ROOT:/app -w /app/dgraph golang:1.14 go build -o /app/osx-docker-gopath/bin/dgraph
+    buildBinaryForDocker
     GOPATH=$GIT_ROOT/osx-docker-gopath docker-compose up "$@";;
   down) GOPATH=$GIT_ROOT/osx-docker-gopath docker-compose -p dgraph down "$@";;
   make) make -C $GIT_ROOT "$@";;
   test) PATH="$GIT_ROOT/dgraph:$PATH" go test "$@";;
+  image)
+    buildBinaryForDocker
+    mkdir $GIT_ROOT/linux
+    cp $GIT_ROOT/osx-docker-gopath/bin/dgraph $GIT_ROOT/linux
+    docker build "$@" -f $GIT_ROOT/contrib/Dockerfile $GIT_ROOT;;
 esac
