@@ -33,6 +33,7 @@
   autosetupmerge = true
 [push]
   default = upstream
+  followTags = true
 [core]
   excludesfile = /Users/gja/.gitglobalignore
 [filter "lfs"]
@@ -40,3 +41,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[pull]
+	rebase = false

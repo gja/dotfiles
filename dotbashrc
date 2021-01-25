@@ -103,3 +103,4 @@ alias bc="bc -l"
 if [ -x ~/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/MacOS/mplayer ]; then
   alias mplayer="$HOME/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/MacOS/mplayer"
 fi
+export PATH="/usr/local/opt/terraform@0.12/bin:$PATH"

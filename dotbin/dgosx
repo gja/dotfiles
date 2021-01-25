@@ -25,10 +25,12 @@ function buildBinaryForDocker() {
 case "$COMMAND" in
   up)
     buildBinaryForDocker
-    GOPATH=$GIT_ROOT/osx-docker-gopath docker-compose up "$@";;
+    GOPATH=$GIT_ROOT/osx-docker-gopath docker-compose -p dgraph up "$@";;
   down) GOPATH=$GIT_ROOT/osx-docker-gopath docker-compose -p dgraph down "$@";;
-  make) make -C $GIT_ROOT "$@";;
-  test) PATH="$GIT_ROOT/dgraph:$PATH" go test "$@";;
+  make) 
+    make -C $GIT_ROOT "$@"
+    cp $GIT_ROOT/dgraph/dgraph ~/go/bin;;
+  test) PATH="$GIT_ROOT/dgraph:$PATH" GOPATH="$GIT_ROOT/osx-docker-gopath" DGRAPH_BINARY="$GIT_ROOT/dgraph/dgraph" TEST_DOCKER_PREFIX=dgraph go test "$@";;
   image)
     buildBinaryForDocker
     mkdir $GIT_ROOT/linux || true
