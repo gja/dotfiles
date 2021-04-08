@@ -12,8 +12,6 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "workbench.statusBar.feedback.visible": false,
-
-    "window.zoomLevel": 0,
     "files.associations": {
         "*.css": "scss"
     },
@@ -40,5 +38,6 @@
         "Tejas"
     ],
     "workbench.colorTheme": "Monokai Dimmed",
-    "workbench.editor.showTabs": true
+    "liveshare.authenticationProvider": "GitHub",
+    "go.toolsManagement.autoUpdate": true
 }
