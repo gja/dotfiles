@@ -3,15 +3,17 @@
 ## Assuming Homebrew is already installed
 
 brew install bash bash-completion mas
-brew cask install zoomus iterm2 visual-studio-code superhuman slack brave-browser docker whatsapp turbo-boost-switcher time-out nordvpn
+brew install --cask zoom iterm2 visual-studio-code superhuman slack brave-browser docker whatsapp nordvpn 1password
 
 mas lucky Todoist
 mas lucky Divvy
 mas lucky "Time Out"
 mas lucky Pastebot
+mas lucky Bear
 
 brew install leiningen
-brew cask install java
+
+brew install --cask java
 
 brew install golang
 
