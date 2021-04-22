@@ -11,15 +11,6 @@ mas lucky "Time Out"
 mas lucky Pastebot
 mas lucky Bear
 
-brew install leiningen
-
 brew install --cask java
 
-brew install golang
-
-brew install nodejs
-
-brew install rbenv
-
-brew install rustup
-
+brew install leiningen golang nodejs rbenv rustup tfenv

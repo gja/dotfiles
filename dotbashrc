@@ -8,8 +8,6 @@ alias g=git
 alias gc='git commit'
 alias ga='git add'
 alias gst='git status'
-alias iphone='/Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app/Contents/MacOS/iOS\ Simulator'
-alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
 
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
@@ -20,6 +18,7 @@ for i in /usr/local/bin \
   /usr/local/opt/curl/bin \
   /usr/local/opt/coreutils/libexec/gnubin \
   /usr/local/opt/findutils/libexec/gnubin \
+  ~/Library/Android/sdk/tools/bin \
   ~/.bin \
   ~/bin; do
   if [ -d "$i" ]; then
@@ -79,7 +78,7 @@ if [ "$BASH_VERSINFO" -ge 4 ]; then
   if [ -f /usr/local/etc/bash_completion ]; then
     . /usr/local/etc/bash_completion
   fi
-  export BUNDLER_EDITOR=sublime
+  export BUNDLER_EDITOR=code
   export LC_CTYPE=en_US
 
   PS1='[\h \W$(__git_ps1 " (%s)")]Ω '
@@ -103,4 +102,3 @@ alias bc="bc -l"
 if [ -x ~/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/MacOS/mplayer ]; then
   alias mplayer="$HOME/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/MacOS/mplayer"
 fi
-export PATH="/usr/local/opt/terraform@0.12/bin:$PATH"
