@@ -12,7 +12,9 @@ alias gst='git status'
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
-for i in /usr/local/bin \
+for i in \
+  /opt/homebrew/bin \
+  /usr/local/bin \
   ~/.cargo \
   /usr/local/opt/gnu-getopt/bin \
   /usr/local/opt/curl/bin \
