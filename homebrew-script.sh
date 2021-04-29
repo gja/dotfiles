@@ -13,4 +13,4 @@ mas lucky Bear
 
 brew install --cask java
 
-brew install leiningen golang nodejs rbenv rustup tfenv
+brew install leiningen golang nodejs rbenv rustup tfenv helm
