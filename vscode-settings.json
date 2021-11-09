@@ -1,43 +1,42 @@
 {
-    "editor.tabSize": 2,
-    "editor.wordWrapColumn": 120,
+    "workbench.iconTheme": "vs-minimal",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.shell.osx": "/opt/homebrew/bin/bash",
+    "terminal.integrated.profiles.osx": {
+        "bash-latest": {
+            "path": "/opt/homebrew/bin/bash",
+            "args": []
+        }
+    },
+    "terminal.integrated.shellArgs.osx": [],
     "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
-    "eslint.autoFixOnSave": true,
-    "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
-    "workbench.editor.showIcons": false,
-    "editor.detectIndentation": true,
-    "files.autoSave": "onFocusChange",
-    "editor.formatOnPaste": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.snippetSuggestions": "top",
-    "workbench.statusBar.feedback.visible": false,
-    "files.associations": {
-        "*.css": "scss"
+    "editor.tabSize": 2,
+    "files.autoSave": "onWindowChange",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
-    "workbench.editor.enablePreview": false,
-    "explorer.confirmDelete": false,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "breadcrumbs.enabled": true,
-
-    "editor.codeActionsOnSave": {
-        "source.fixAll.tslint": true,
-        "source.fixAll.eslint": true
+    "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home",
+    "redhat.telemetry.enabled": false,
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": false,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false,
+        "javascript": true
     },
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "explorer.confirmDragAndDrop": false,
-    "nasc-touchbar.showReferences": true,
-    "nasc-touchbar.togglePanel": false,
-    "nasc-touchbar.peekDefinition": true,
-    "nasc-touchbar.jumpToBracket": true,
-    "nasc-touchbar.addCursorBelow": false,
-    "nasc-touchbar.showCommands": false,
-    "go.formatTool": "goimports",
-    "go.useLanguageServer": true,
-    "cSpell.userWords": [
-        "Tejas"
-    ],
-    "workbench.colorTheme": "Monokai Dimmed",
-    "liveshare.authenticationProvider": "GitHub",
-    "go.toolsManagement.autoUpdate": true
+    "ruby.rubocop.useBundler": true,
+    "ruby.pathToBundler": "/Users/gja/.rbenv/shims/bundle",
+    "ruby.interpreter.commandPath": "/Users/gja/.rbenv/shims/ruby",
+    "[ruby]": {
+        "editor.defaultFormatter": "misogi.ruby-rubocop"
+    },
+    "[php]": {
+        "editor.tabSize": 4
+    }
 }
