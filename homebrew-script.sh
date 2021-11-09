@@ -9,7 +9,6 @@ mas lucky Todoist
 mas lucky Divvy
 mas lucky "Time Out"
 mas lucky Pastebot
-mas lucky Bear
 mas lucky 1Password
 
 brew install --cask java
