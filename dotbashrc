@@ -104,3 +104,7 @@ alias bc="bc -l"
 if [ -x ~/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/MacOS/mplayer ]; then
   alias mplayer="$HOME/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/MacOS/mplayer"
 fi
+
+if which icalBuddy > /dev/null 2>&1; then
+  function today() { iCalBuddy -n -f -nnr " " -ea eventsToday$@ | sed -e "s/\(http[^ \"]*\).*/THEREISALINKHERE\1/g" -e "s/notes:.*THEREISALINKHERE/link: /g" -e "s/THEREISALINKHERE//g"; }
+fi
