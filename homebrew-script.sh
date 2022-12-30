@@ -2,13 +2,11 @@
 
 ## Assuming Homebrew is already installed
 
-brew install bash bash-completion mas
+brew install bash bash-completion mas raycast
 brew install --cask zoom iterm2 visual-studio-code superhuman slack docker whatsapp
 
 mas lucky Todoist
-mas lucky Divvy
 mas lucky "Time Out"
-mas lucky Pastebot
 mas lucky 1Password
 
 brew install --cask java
