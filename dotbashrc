@@ -58,6 +58,11 @@ if [ -d /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home ]; then
   export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
 fi
 
+if [ -d "$HOME/Library/Android/sdk" ]; then
+  export ANDROID_HOME=$HOME/Library/Android/sdk
+  export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools
+end
+
 if [ "$BASH_VERSINFO" -ge 4 ]; then
   # bash configurations
   export HISTCONTROL=ignoredups:erasedups
