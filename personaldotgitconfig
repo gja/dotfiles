@@ -33,8 +33,9 @@
 [branch]
   autosetupmerge = true
 [push]
-  default = upstream
+  default = current
   followTags = true
+  autoSetupRemote = true
 [core]
   excludesfile = /Users/gja/.gitglobalignore
 [filter "lfs"]
@@ -49,6 +50,8 @@
 [gpg]
   format = ssh
 [gpg "ssh"]
-  program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [commit]
   gpgsign = true
+[checkout]
+	defaultRemote = origin
